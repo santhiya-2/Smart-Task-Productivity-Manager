@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+.header {
+  background: #2563eb;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-form input,
+.task-form select,
+.task-form button {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.filters {
+  margin: 15px 0;
+}
+
+.filters button {
+  margin-right: 5px;
+  padding: 6px 10px;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task.overdue {
+  border-left-color: red;
+}
+
+@media (max-width: 600px) {
+  .task-form {
+    flex-direction: column;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+input, select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input:focus, select:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+.task {
+  border-left: 6px solid #2563eb;
+}
+.task.overdue {
+  border-left-color: red;
+}
+
+.task.high {
+  border-left: 5px solid #dc2626; /* red */
+}
+
+.task.medium {
+  border-left: 5px solid #f59e0b; /* orange */
+}
+
+.task.low {
+  border-left: 5px solid #16a34a; /* green */
+}
+
+.filters input {
+  padding: 8px;
+  margin-right: 10px;
+  width: 200px;
+}
+

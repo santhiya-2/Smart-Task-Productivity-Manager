@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Task Manager</title>
+  <link rel="stylesheet" href="./smart-task.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Smart Task & Productivity Manager</h1>
+    <p>Manage tasks with priority and deadlines</p>
+  </header>
+
+  <main class="container">
+
+  
+
+    <input
+  type="text"
+  id="searchInput"
+  placeholder="Search tasks..."
+  onkeyup="searchTasks()"
+/>
+  <button onclick="filterTasks('all')">All</button>
+  <button onclick="filterTasks('completed')">Completed</button>
+  <button onclick="filterTasks('pending')">Pending</button>
+</section>
+
+<section class="task-form">
+  <input type="text" id="taskInput" placeholder="Enter task"/>
+
+  <select id="priority">
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+  </select>
+
+  <input type="date" id="dueDate">
+  <button onclick="addTask()">Add Task</button>
+</section>
+
+<ul id="taskList"></ul>
+
+
+  </main>
+
+  <script src="./smart-task.js"></script>
+</body>
+</html>
